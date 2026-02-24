@@ -1,0 +1,14 @@
+### GETList usuarios
+GET http://localhost:3000/usuarios
+
+### GET usuarios
+GET http://localhost:3000/usuarios/3
+
+### CREATE usuarios
+POST http://localhost:3000/usuarios
+
+### UPDATE usuarios
+PATCH http://localhost:3000/usuarios
+
+### DELETE usuarios
+DELETE http://localhost:3000/usuarios
