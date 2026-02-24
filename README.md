@@ -25,6 +25,24 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Banco de dados MySQL
+- No projeto, no arquivo app.module.ts, altere os dados de conexão com o banco de dados.
+Apesar de os dados estarem definidos diretamente no arquivo, a boa prática é mantê-los em variáveis de ambiente (environment), evitando deixar informações sensíveis fixas no código.
+
+- Base de dados: nestdb
+- Tabela: usuario
+
+```bash
+ CREATE TABLE `usuario` (
+   `id` int NOT NULL AUTO_INCREMENT,
+   `nome` varchar(50) DEFAULT NULL,
+   `email` varchar(60) DEFAULT NULL,
+   `matricula` varchar(11) DEFAULT NULL,
+   `senha` varchar(40) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
+
 ## Project setup
 
 ```bash
@@ -96,21 +114,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-
-## Banco de dados MySQL
-- No projeto, no arquivo app.module.ts, altere os dados de conexão com o banco de dados.
-Apesar de os dados estarem definidos diretamente no arquivo, a boa prática é mantê-los em variáveis de ambiente (environment), evitando deixar informações sensíveis fixas no código.
-
-- Base de dados: nestdb
-- Tabela: usuario
-
-```bash
- CREATE TABLE `usuario` (
-   `id` int NOT NULL AUTO_INCREMENT,
-   `nome` varchar(50) DEFAULT NULL,
-   `email` varchar(60) DEFAULT NULL,
-   `matricula` varchar(11) DEFAULT NULL,
-   `senha` varchar(40) DEFAULT NULL,
-   PRIMARY KEY (`id`)
- ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
-```
